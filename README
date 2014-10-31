@@ -1,0 +1,24 @@
+1.Set JAVA_HOME
+[On Linux]
+export JAVA_HOME=/opt/IBM/WebSphere/AppServer/java
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+[On Windows]
+SET JAVA_HOME=C:\Program Files\Java\jdk1.6.0_03;
+SET PATH=%JAVA_HOME%\bin;%path%;
+SET CLASSPATH=.;.\lib\RC4.jar;.\lib\sun-jndi-ldapbp.jar;.\lib\commons-cli-1.2.jar;
+
+2.Decoder/Encoder password
+For example:
+(1)Decoder
+[On Linux]
+[wdfang@was WAS_Password_Tool]#./decoder.sh "{xor}KDs5PjE4"
+[On Windows]
+C:\WAS_Password_Tool>decoder.bat "{xor}KDs5PjE4"
+
+(2)Encoder
+[On Linux]
+[wdfang@was WAS_Password_Tool]#./encoder.sh "wdfang"
+[On Windows]
+C:\WAS_Password_Tool>encoder.bat "wdfang"
